@@ -31,6 +31,7 @@ gem 'omniauth-facebook'
 gem "letter_opener", :group => :development
 gem "figaro"
 gem 'sendgrid-ruby'
+gem 'faker'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
