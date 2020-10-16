@@ -1,10 +1,11 @@
+<div class="homepage">
 <p id="notice"><%= notice %></p>
 
 <h1>Community Posts</h1>
 
 <div>
 <%= image_tag url_for(user_avatar(current_user, 100)), class: "rounded-circle" %>
-<p>
+<p class="mind" >
   <%= "What's on your mind #{current_user.first_name}?"%><br>
 </p>
 <%= button_to 'New Post', new_post_path, method: :get %>
@@ -35,7 +36,7 @@
           <% else %>
             <%= button_to 'Like', post_likes_path(post), method: :post %>
           <% end %>
-          <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes |'%>
+          <p class="post-stats"><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes |'%>
           <%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Comments'%></p>
             <% post.posted_feedback.each do |comment| %>
               <p class="comments"><%= comment %></p>
@@ -49,4 +50,5 @@
     <% end %>
   </tbody>
 </table>
+</div>
 

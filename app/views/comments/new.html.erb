@@ -1,9 +1,9 @@
 <h1>New Comment</h1>
 
-<div class="post">
+<div class="new-comment">
     <p><%= @post.post %></p>
     <p><%= "- #{@post.user.first_name} #{@post.user.last_name} -"%></p>
-    <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes |'%>
+    <p class="post-stats"><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes |'%>
     <%= @post.comments.count %> <%= (@post.comments.count) == 1 ? 'Comment' : 'Comments'%></p>
 
     <% @post.posted_feedback.each do |comment| %>
@@ -13,4 +13,4 @@
 
 <%= render 'form', comment: @comment %>
 
-<%= link_to 'Back', posts_path, method: :get %>
+<%= link_to 'Back', posts_path, method: :get, :class => "back-button" %>

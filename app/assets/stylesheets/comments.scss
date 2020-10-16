@@ -1,3 +1,48 @@
 // Place all the styles related to the Comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+//Create Comments on post
+
+.new-comment {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 2rem 0rem;
+
+    input {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+    }
+
+    .comments {
+        font-size: 10px;
+    }
+}
+
+.new-comment-form {    
+    textarea {
+        width: 30rem;
+        height: 5rem;
+    }
+
+    input {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+    }
+}

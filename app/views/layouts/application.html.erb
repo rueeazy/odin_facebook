@@ -19,7 +19,7 @@
           </ul>
         </div>
         <div class="right-nav">
-          <ul>
+          <ul class="right-nav-items">
           <% if signed_in? %>
             <li><%= link_to "Friends", friendships_path %></li>
             <li><%= link_to "#{current_user.first_name}", user_path(current_user), method: :get %>
@@ -36,7 +36,7 @@
       <%= yield %>
 
       <% if signed_in? %>
-      <p><%= button_to "Logout", destroy_user_session_path, method: :delete %></p>
+      <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => "logout-home" %>
       <% end %>
     </div>
 

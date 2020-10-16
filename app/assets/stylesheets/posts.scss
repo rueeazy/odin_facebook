@@ -1,3 +1,105 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.homepage {
+    margin: 1rem 10rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+    }
+
+    .mind {
+        margin-bottom: 1rem;
+    }
+}
+
+img.rounded-circle {
+    border-radius: 50px;
+  }
+
+.post {
+    align-self: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+    background-color: white;
+    width: 500px;
+    padding: 10px;
+    border-radius: 15px;
+
+    input {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+    }
+
+    .comments {
+        font-size: 10px;
+    }
+}
+
+.post-content {
+    width: 400px;
+    padding: 10px
+}
+
+.post-stats { 
+    border-bottom: 1px solid grey;
+}
+// New Posts
+.new {
+    align-self: flex-start;
+
+    textarea {
+        margin: 1rem 0rem;
+        width: 300px;
+        height: 300px;
+        border-radius: 4px;
+    }
+
+    //buttons styling
+    input {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+    }
+}
+
+// Show Specific Post Page
+
+.post {
+
+    .edit-button {
+        background-color: #3c5898;
+        color: white;
+        border: none;
+        padding: .25rem;
+        margin-bottom: .25rem;
+        border-radius: 3px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19);
+        cursor: pointer;
+        width: 30px;
+      }
+}

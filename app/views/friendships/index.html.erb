@@ -7,17 +7,17 @@
     <% end %>
 <% end %>
 
-<h4>Friends</h4>
+<h4 class="title">Friends</h4>
 <% current_user.friends.each do |friend| %>
   <div class="user">
     <p>
       <%= image_tag user_avatar(friend, 20), class: "rounded-circle" %>
       <%= friend.first_name %>
       <%= friend.last_name %>
-      <%= link_to "| View Profile", user_path(friend), method: :get %>
+      <%= link_to "View Profile", user_path(friend), method: :get, :class => "view-profile" %>
     </p>
   </div>
   <% end %>
 
-  <%= link_to "Find Friends |", users_path, method: :get %>
-  <%= link_to 'Back', posts_path %>
+  <%= link_to "Find Friends", users_path, method: :get, :class => "find-friends" %>
+  <%= link_to 'Back', posts_path, :class => "back-button" %>

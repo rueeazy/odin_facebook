@@ -1,3 +1,4 @@
+<div class="users-show">
 <%= image_tag user_avatar(@user, 100), class: "rounded-circle" %>
 <h1><%= @user.first_name %> <%= @user.last_name %></h1>
 <% if @user == current_user %>
@@ -12,10 +13,10 @@
 <% end %>
 <h4><%= @user.email%></h4>
 <% if @user == current_user %>
-<h3><%= link_to "My Friends", friendships_path, method: :get %></h3> 
+<h3 class="my-friends"><%= link_to "My Friends", friendships_path, method: :get %></h3> 
 <% end %>
 
-<h3>Recent Posts</h3>
+<h3>Recent Posts</h3><br>
 <div class="post">
     <div class="post-content">
         <% @user.posts.each do |post| %>
@@ -23,14 +24,15 @@
             <%= post.post %><br><br>
             <%= "- #{@user.first_name} #{@user.last_name} -"%>
     </div>
-        <p><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes |'%>
+        <p class="post-stats"><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes |'%>
         <%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Comments'%></p>
         <% post.posted_feedback.each do |comment| %>
             <p class="comments"><%= comment %></p>
         <% end %>
       <% end %>
 </div><br>
+</div>
 
 
 
-<%= button_to "Edit Profile", edit_user_registration_path, method: :get %>
+<%= button_to "Edit Profile", edit_user_registration_path, method: :get, :class => "edit-profile" %>

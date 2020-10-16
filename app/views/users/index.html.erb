@@ -1,4 +1,4 @@
-<h1>Users</h1>
+<h1 class="users-title">Users</h1>
 <% @users.each do |user| %>
   <% next if user == current_user %>
   <div class="user">
@@ -6,7 +6,7 @@
       <%= image_tag user_avatar(user, 30), class: "rounded-circle" %>
       <%= link_to "#{user.first_name} #{user.last_name}", user_path(user), method: :get %>
       <% if !current_user.friend?(user) %>
-        <%= link_to "| Add Friend", friendships_path(friend_id: user.id), method: :post %>
+        <%= link_to "Add Friend", friendships_path(friend_id: user.id), method: :post, :class => "add-friend" %>
       <% end %><br/>
     </p>
   </div>
